@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="We study the stochastic batched convex optimization problem, in which we use many *parallel* observations to optimize a convex function given limited rounds of interaction. In each of $M$ rounds, an algorithm may query for information at $n$ points, and after issuing all $n$ queries, it receives unbiased noisy function and/or (sub)gradient evaluations at the $n$ points. After $M$ such rounds, the algorithm must output an estimator. We provide lower and upper bounds on the performance of such batched convex optimization algorithms in zeroth and first-order settings for Lipschitz convex and smooth strongly convex functions. Our rates of convergence (nearly) achieve the fully sequential rate once $M = O(d \log\log n)$, where $d$ is the problem dimension, but the rates may exponentially degrade as the dimension $d$ increases, in distinction from fully sequential settings.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/duchi2018minimax/>
+<meta name=description content="It is known that $O(N)$ parameters are sufficient for neural networks to memorize arbitrary $N$ input-label pairs. By exploiting depth, we show that $O(N^\{2/3\})$ parameters suffice to memorize $N$ pairs, under a mild condition on the separation of input points. In particular, deeper networks (even with width 3) are shown to memorize more pairs than shallow networks, which also agrees with the recent line of works on the benefits of depth for function approximation. We also provide empirical results that support our theoretical findings.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/park2021provable/>
 <meta name=theme-color content="#1565c0">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -21,19 +21,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/duchi2018minimax/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/park2021provable/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/duchi2018minimax/">
-<meta property="og:title" content="Minimax Bounds on Stochastic Batched Convex Optimization | Chulhee “Charlie” Yun">
-<meta property="og:description" content="We study the stochastic batched convex optimization problem, in which we use many *parallel* observations to optimize a convex function given limited rounds of interaction. In each of $M$ rounds, an algorithm may query for information at $n$ points, and after issuing all $n$ queries, it receives unbiased noisy function and/or (sub)gradient evaluations at the $n$ points. After $M$ such rounds, the algorithm must output an estimator. We provide lower and upper bounds on the performance of such batched convex optimization algorithms in zeroth and first-order settings for Lipschitz convex and smooth strongly convex functions. Our rates of convergence (nearly) achieve the fully sequential rate once $M = O(d \log\log n)$, where $d$ is the problem dimension, but the rates may exponentially degrade as the dimension $d$ increases, in distinction from fully sequential settings."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/park2021provable/">
+<meta property="og:title" content="Provable Memorization via Deep Neural Networks using Sub-linear Parameters | Chulhee “Charlie” Yun">
+<meta property="og:description" content="It is known that $O(N)$ parameters are sufficient for neural networks to memorize arbitrary $N$ input-label pairs. By exploiting depth, we show that $O(N^\{2/3\})$ parameters suffice to memorize $N$ pairs, under a mild condition on the separation of input points. In particular, deeper networks (even with width 3) are shown to memorize more pairs than shallow networks, which also agrees with the recent line of works on the benefits of depth for function approximation. We also provide empirical results that support our theoretical findings."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2020-01-01T00:00:00+00:00">
-<meta property="article:modified_time" content="2018-07-01T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/duchi2018minimax/"},"headline":"Minimax Bounds on Stochastic Batched Convex Optimization","datePublished":"2020-01-01T00:00:00Z","dateModified":"2018-07-01T00:00:00Z","author":{"@type":"Person","name":"John Duchi"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"}},"description":"We study the stochastic batched convex optimization problem, in which we use many *parallel* observations to optimize a convex function given limited rounds of interaction. In each of $M$ rounds, an algorithm may query for information at $n$ points, and after issuing all $n$ queries, it receives unbiased noisy function and/or (sub)gradient evaluations at the $n$ points. After $M$ such rounds, the algorithm must output an estimator. We provide lower and upper bounds on the performance of such batched convex optimization algorithms in zeroth and first-order settings for Lipschitz convex and smooth strongly convex functions. Our rates of convergence (nearly) achieve the fully sequential rate once $M = O(d \\log\\log n)$, where $d$ is the problem dimension, but the rates may exponentially degrade as the dimension $d$ increases, in distinction from fully sequential settings."}</script>
-<title>Minimax Bounds on Stochastic Batched Convex Optimization | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2021-08-01T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/park2021provable/"},"headline":"Provable Memorization via Deep Neural Networks using Sub-linear Parameters","datePublished":"2020-01-01T00:00:00Z","dateModified":"2021-08-01T00:00:00Z","author":{"@type":"Person","name":"Sejun Park"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"}},"description":"It is known that $O(N)$ parameters are sufficient for neural networks to memorize arbitrary $N$ input-label pairs. By exploiting depth, we show that $O(N^\\{2/3\\})$ parameters suffice to memorize $N$ pairs, under a mild condition on the separation of input points. In particular, deeper networks (even with width 3) are shown to memorize more pairs than shallow networks, which also agrees with the recent line of works on the benefits of depth for function approximation. We also provide empirical results that support our theoretical findings."}</script>
+<title>Provable Memorization via Deep Neural Networks using Sub-linear Parameters | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=5a926cb73c8878447afaf52529b42daa>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=866074fd759f8204c604ff589e704294>
 <script src=/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -110,26 +110,27 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Minimax Bounds on Stochastic Batched Convex Optimization</h1>
+<h1>Provable Memorization via Deep Neural Networks using Sub-linear Parameters</h1>
 <div class=article-metadata>
 <div>
 <span>
-John Duchi</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Alphabetical order"></i>, <span>
-Feng Ruan</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Alphabetical order"></i>, <span class=author-highlighted>
-Chulhee Yun</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Alphabetical order"></i>
+Sejun Park</span>, <span>
+Jaeho Lee</span>, <span class=author-highlighted>
+Chulhee Yun</span>, <span>
+Jinwoo Shin</span>
 </div>
 <span class=article-date>
-July 2018
+August 2021
 </span>
 </div>
 <div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href=https://proceedings.mlr.press/v75/duchi18a.html target=_blank rel=noopener>
-Paper</a>
+<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2010.13363 target=_blank rel=noopener>
+arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>We study the stochastic batched convex optimization problem, in which we use many <em>parallel</em> observations to optimize a convex function given limited rounds of interaction. In each of $M$ rounds, an algorithm may query for information at $n$ points, and after issuing all $n$ queries, it receives unbiased noisy function and/or (sub)gradient evaluations at the $n$ points. After $M$ such rounds, the algorithm must output an estimator. We provide lower and upper bounds on the performance of such batched convex optimization algorithms in zeroth and first-order settings for Lipschitz convex and smooth strongly convex functions. Our rates of convergence (nearly) achieve the fully sequential rate once $M = O(d \log\log n)$, where $d$ is the problem dimension, but the rates may exponentially degrade as the dimension $d$ increases, in distinction from fully sequential settings.</p>
+<p class=pub-abstract>It is known that $O(N)$ parameters are sufficient for neural networks to memorize arbitrary $N$ input-label pairs. By exploiting depth, we show that $O(N^{2/3})$ parameters suffice to memorize $N$ pairs, under a mild condition on the separation of input points. In particular, deeper networks (even with width 3) are shown to memorize more pairs than shallow networks, which also agrees with the recent line of works on the benefits of depth for function approximation. We also provide empirical results that support our theoretical findings.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -150,7 +151,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>Conference on Learning Theory 2018</em></div>
+<div class="col-12 col-md-9"><em>Conference on Learning Theory 2021</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
