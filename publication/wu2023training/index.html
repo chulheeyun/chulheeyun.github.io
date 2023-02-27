@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="Assistant Professor">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/group/>
+<meta name=description content="We uncover how SGD interacts with batch normalization and can exhibit undesirable training dynamics such as divergence. More precisely, we study how Single Shuffle (SS) and Random Reshuffle (RR)—two widely used variants of SGD—interact surprisingly differently in the presence of batch normalization: RR leads to much more stable evolution of training loss than SS. As a concrete example, for regression using a linear network with batch normalization, we prove that SS and RR converge to distinct global optima that are “distorted” away from gradient descent. Thereafter, for classification we characterize conditions under which training divergence for SS and RR can, and cannot occur. We present explicit constructions to show how SS leads to distorted optima in regression and divergence for classification, whereas RR avoids both distortion and divergence. We validate our results by confirming them empirically in realistic settings, and conclude that the separation between SS and RR used with batch normalization is relevant in practice.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/wu2023training/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -17,21 +17,22 @@
 <link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'">
 <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
 <link rel=stylesheet href=/css/wowchemy.94ce078b6ba7df2440fe0463dc38f20e.css>
-<link rel=alternate href=/group/index.xml type=application/rss+xml title="Chulhee “Charlie” Yun">
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/group/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/wu2023training/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/group/">
-<meta property="og:title" content="Groups | Chulhee “Charlie” Yun">
-<meta property="og:description" content="Assistant Professor"><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/wu2023training/">
+<meta property="og:title" content="On the Training Instability of Shuffling SGD with Batch Normalization | Chulhee “Charlie” Yun">
+<meta property="og:description" content="We uncover how SGD interacts with batch normalization and can exhibit undesirable training dynamics such as divergence. More precisely, we study how Single Shuffle (SS) and Random Reshuffle (RR)—two widely used variants of SGD—interact surprisingly differently in the presence of batch normalization: RR leads to much more stable evolution of training loss than SS. As a concrete example, for regression using a linear network with batch normalization, we prove that SS and RR converge to distinct global optima that are “distorted” away from gradient descent. Thereafter, for classification we characterize conditions under which training divergence for SS and RR can, and cannot occur. We present explicit constructions to show how SS leads to distorted optima in regression and divergence for classification, whereas RR avoids both distortion and divergence. We validate our results by confirming them empirically in realistic settings, and conclude that the separation between SS and RR used with batch normalization is relevant in practice."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
-<meta property="og:updated_time" content="2022-03-03T00:00:00+00:00">
-<title>Groups | Chulhee “Charlie” Yun</title>
+<meta property="article:published_time" content="2023-02-24T00:00:00+00:00">
+<meta property="article:modified_time" content="2023-02-24T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/wu2023training/"},"headline":"On the Training Instability of Shuffling SGD with Batch Normalization","datePublished":"2023-02-24T00:00:00Z","dateModified":"2023-02-24T00:00:00Z","author":{"@type":"Person","name":"David X. Wu"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"We uncover how SGD interacts with batch normalization and can exhibit undesirable training dynamics such as divergence. More precisely, we study how Single Shuffle (SS) and Random Reshuffle (RR)—two widely used variants of SGD—interact surprisingly differently in the presence of batch normalization: RR leads to much more stable evolution of training loss than SS. As a concrete example, for regression using a linear network with batch normalization, we prove that SS and RR converge to distinct global optima that are “distorted” away from gradient descent. Thereafter, for classification we characterize conditions under which training divergence for SS and RR can, and cannot occur. We present explicit constructions to show how SS leads to distorted optima in regression and divergence for classification, whereas RR avoids both distortion and divergence. We validate our results by confirming them empirically in realistic settings, and conclude that the separation between SS and RR used with batch normalization is relevant in practice."}</script>
+<title>On the Training Instability of Shuffling SGD with Batch Normalization | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark">
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=3f31d35011cac005833108c6b8d9ce8c>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -99,56 +100,70 @@
 </header>
 </div>
 <div class=page-body>
-<div class="universal-wrapper pt-3">
-<h1>Groups</h1>
-</div>
-<div class=universal-wrapper>
-<div class="media stream-item view-compact">
-<div class=media-body>
-<div class="section-subheading article-title mb-0 mt-0">
-<a href=/group/ug/>**Undergraduate Students**</a>
-</div>
-<div class="stream-meta article-metadata">
+<div class=pub>
+<div class="article-container pt-3">
+<h1>On the Training Instability of Shuffling SGD with Batch Normalization</h1>
 <div class=article-metadata>
+<div>
+<span>
+David X. Wu</span>, <span class=author-highlighted>
+Chulhee Yun</span>, <span>
+Suvrit Sra</span>
+</div>
 <span class=article-date>
-Mar 3, 2022
+February 2023
 </span>
 </div>
+<div class="btn-links mb-3">
+<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2302.12444 target=_blank rel=noopener>
+arXiv</a>
 </div>
 </div>
-<div class=ml-3>
+<div class=article-container>
+<h3>Abstract</h3>
+<p class=pub-abstract>We uncover how SGD interacts with batch normalization and can exhibit undesirable training dynamics such as divergence. More precisely, we study how Single Shuffle (SS) and Random Reshuffle (RR)—two widely used variants of SGD—interact surprisingly differently in the presence of batch normalization: RR leads to much more stable evolution of training loss than SS. As a concrete example, for regression using a linear network with batch normalization, we prove that SS and RR converge to distinct global optima that are “distorted” away from gradient descent. Thereafter, for classification we characterize conditions under which training divergence for SS and RR can, and cannot occur. We present explicit constructions to show how SS leads to distorted optima in regression and divergence for classification, whereas RR avoids both distortion and divergence. We validate our results by confirming them empirically in realistic settings, and conclude that the separation between SS and RR used with batch normalization is relevant in practice.</p>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Type</div>
+<div class="col-12 col-md-9">
+<a href=/publication/#3>
+Preprint
+</a>
 </div>
 </div>
-<div class="media stream-item view-compact">
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Publication</div>
+<div class="col-12 col-md-9"><em>arXiv Preprint</em></div>
+</div>
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=space-below></div>
+<div class=article-style></div>
+<div class="media author-card content-widget-hr">
+<a href=https://chulheeyun.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/chulhee-yun/avatar_hu25d333fcded103db2f52f7476cb1420a_326069_270x270_fill_q75_lanczos_center.jpg alt="Chulhee Yun"></a>
 <div class=media-body>
-<div class="section-subheading article-title mb-0 mt-0">
-<a href=/group/ms/>**Master's Students** (all students are in KAIST AI)</a>
+<h5 class=card-title><a href=https://chulheeyun.github.io/>Chulhee Yun</a></h5>
+<h6 class=card-subtitle>Assistant Professor</h6>
+<p class=card-text>I am an assistant professor at KAIST AI. I am interested in optimization and machine learning theory.</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href="https://scholar.google.com/citations?user=Ukl64ggAAAAJ" target=_blank rel=noopener>
+<i class="fas fa-graduation-cap"></i>
+</a>
+</li>
+</ul>
 </div>
-<div class="stream-meta article-metadata">
-<div class=article-metadata>
-<span class=article-date>
-Mar 2, 2022
-</span>
-</div>
-</div>
-</div>
-<div class=ml-3>
-</div>
-</div>
-<div class="media stream-item view-compact">
-<div class=media-body>
-<div class="section-subheading article-title mb-0 mt-0">
-<a href=/group/phd/>**PhD Students** (all students are in KAIST AI)</a>
-</div>
-<div class="stream-meta article-metadata">
-<div class=article-metadata>
-<span class=article-date>
-Mar 1, 2022
-</span>
-</div>
-</div>
-</div>
-<div class=ml-3>
 </div>
 </div>
 </div>
