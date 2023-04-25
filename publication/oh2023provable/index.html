@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="We study convergence lower bounds of without-replacement stochastic gradient descent (SGD) for solving smooth (strongly-)convex finite-sum minimization problems. Unlike most existing results focusing on final iterate lower bounds in terms of the number of components $n$ and the number of epochs $K$, we seek bounds for arbitrary weighted average iterates that are tight in all factors including the condition number $\kappa$. For SGD with Random Reshuffling, we present lower bounds that have tighter $\kappa$ dependencies than existing bounds. Our results are the first to perfectly close the gap between lower and upper bounds for weighted average iterates in both strongly-convex and convex cases. We also prove weighted average iterate lower bounds for arbitrary permutation-based SGD, which apply to all variants that carefully choose the best permutation. Our bounds improve the existing bounds in factors of $n$ and $\kappa$ and thereby match the upper bounds shown for a recently proposed algorithm called GraB.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/cha2023tighter/>
+<meta name=description content="We investigate how pair-wise data augmentation techniques like Mixup affect the sample complexity of finding optimal decision boundaries in a binary linear classification problem. For a family of data distributions with a separability constant $\kappa$, we analyze how well the optimal classifier in terms of training loss aligns with the optimal one in test accuracy (i.e., Bayes optimal classifier). For vanilla training without augmentation, we uncover an interesting phenomenon named the curse of separability. As we increase $\kappa$ to make the data distribution more separable, the sample complexity of vanilla training increases exponentially in $\kappa$; perhaps surprisingly, the task of finding optimal decision boundaries becomes harder for more separable distributions. For Mixup training, we show that Mixup mitigates this problem by significantly reducing the sample complexity. To this end, we develop new concentration results applicable to $n^2$ pair-wise augmented data points constructed from $n$ independent data, by carefully dealing with dependencies between overlapping pairs. Lastly, we study other masking-based Mixup-style techniques and show that they can distort the training loss and make its minimizer converge to a suboptimal classifier in terms of test accuracy.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/oh2023provable/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/cha2023tighter/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/oh2023provable/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/cha2023tighter/">
-<meta property="og:title" content="Tighter Lower Bounds for Shuffling SGD: Random Permutations and Beyond | Chulhee “Charlie” Yun">
-<meta property="og:description" content="We study convergence lower bounds of without-replacement stochastic gradient descent (SGD) for solving smooth (strongly-)convex finite-sum minimization problems. Unlike most existing results focusing on final iterate lower bounds in terms of the number of components $n$ and the number of epochs $K$, we seek bounds for arbitrary weighted average iterates that are tight in all factors including the condition number $\kappa$. For SGD with Random Reshuffling, we present lower bounds that have tighter $\kappa$ dependencies than existing bounds. Our results are the first to perfectly close the gap between lower and upper bounds for weighted average iterates in both strongly-convex and convex cases. We also prove weighted average iterate lower bounds for arbitrary permutation-based SGD, which apply to all variants that carefully choose the best permutation. Our bounds improve the existing bounds in factors of $n$ and $\kappa$ and thereby match the upper bounds shown for a recently proposed algorithm called GraB."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/oh2023provable/">
+<meta property="og:title" content="Provable Benefit of Mixup for Finding Optimal Decision Boundaries | Chulhee “Charlie” Yun">
+<meta property="og:description" content="We investigate how pair-wise data augmentation techniques like Mixup affect the sample complexity of finding optimal decision boundaries in a binary linear classification problem. For a family of data distributions with a separability constant $\kappa$, we analyze how well the optimal classifier in terms of training loss aligns with the optimal one in test accuracy (i.e., Bayes optimal classifier). For vanilla training without augmentation, we uncover an interesting phenomenon named the curse of separability. As we increase $\kappa$ to make the data distribution more separable, the sample complexity of vanilla training increases exponentially in $\kappa$; perhaps surprisingly, the task of finding optimal decision boundaries becomes harder for more separable distributions. For Mixup training, we show that Mixup mitigates this problem by significantly reducing the sample complexity. To this end, we develop new concentration results applicable to $n^2$ pair-wise augmented data points constructed from $n$ independent data, by carefully dealing with dependencies between overlapping pairs. Lastly, we study other masking-based Mixup-style techniques and show that they can distort the training loss and make its minimizer converge to a suboptimal classifier in terms of test accuracy."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2023-03-14T00:00:00+00:00">
-<meta property="article:modified_time" content="2023-03-14T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/cha2023tighter/"},"headline":"Tighter Lower Bounds for Shuffling SGD: Random Permutations and Beyond","datePublished":"2023-03-14T00:00:00Z","dateModified":"2023-03-14T00:00:00Z","author":{"@type":"Person","name":"Jaeyoung Cha"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"We study convergence lower bounds of without-replacement stochastic gradient descent (SGD) for solving smooth (strongly-)convex finite-sum minimization problems. Unlike most existing results focusing on final iterate lower bounds in terms of the number of components $n$ and the number of epochs $K$, we seek bounds for arbitrary weighted average iterates that are tight in all factors including the condition number $\\kappa$. For SGD with Random Reshuffling, we present lower bounds that have tighter $\\kappa$ dependencies than existing bounds. Our results are the first to perfectly close the gap between lower and upper bounds for weighted average iterates in both strongly-convex and convex cases. We also prove weighted average iterate lower bounds for arbitrary permutation-based SGD, which apply to all variants that carefully choose the best permutation. Our bounds improve the existing bounds in factors of $n$ and $\\kappa$ and thereby match the upper bounds shown for a recently proposed algorithm called GraB."}</script>
-<title>Tighter Lower Bounds for Shuffling SGD: Random Permutations and Beyond | Chulhee “Charlie” Yun</title>
+<meta property="article:published_time" content="2023-04-25T00:00:00+00:00">
+<meta property="article:modified_time" content="2023-04-25T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/oh2023provable/"},"headline":"Provable Benefit of Mixup for Finding Optimal Decision Boundaries","datePublished":"2023-04-25T00:00:00Z","dateModified":"2023-04-25T00:00:00Z","author":{"@type":"Person","name":"Junsoo Oh"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"We investigate how pair-wise data augmentation techniques like Mixup affect the sample complexity of finding optimal decision boundaries in a binary linear classification problem. For a family of data distributions with a separability constant $\\kappa$, we analyze how well the optimal classifier in terms of training loss aligns with the optimal one in test accuracy (i.e., Bayes optimal classifier). For vanilla training without augmentation, we uncover an interesting phenomenon named the curse of separability. As we increase $\\kappa$ to make the data distribution more separable, the sample complexity of vanilla training increases exponentially in $\\kappa$; perhaps surprisingly, the task of finding optimal decision boundaries becomes harder for more separable distributions. For Mixup training, we show that Mixup mitigates this problem by significantly reducing the sample complexity. To this end, we develop new concentration results applicable to $n^2$ pair-wise augmented data points constructed from $n$ independent data, by carefully dealing with dependencies between overlapping pairs. Lastly, we study other masking-based Mixup-style techniques and show that they can distort the training loss and make its minimizer converge to a suboptimal classifier in terms of test accuracy."}</script>
+<title>Provable Benefit of Mixup for Finding Optimal Decision Boundaries | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=7787f282cd7feab06f2bd8121bede8b5>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=d3509dd8e14bebc35e402d65fe10d075>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,26 +102,21 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Tighter Lower Bounds for Shuffling SGD: Random Permutations and Beyond</h1>
+<h1>Provable Benefit of Mixup for Finding Optimal Decision Boundaries</h1>
 <div class=article-metadata>
 <div>
 <span>
-Jaeyoung Cha</span>, <span>
-Jaewook Lee</span>, <span class=author-highlighted>
+Junsoo Oh</span>, <span class=author-highlighted>
 Chulhee Yun</span>
 </div>
 <span class=article-date>
-March 2023
+April 2023
 </span>
-</div>
-<div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2303.07160 target=_blank rel=noopener>
-arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>We study convergence lower bounds of without-replacement stochastic gradient descent (SGD) for solving smooth (strongly-)convex finite-sum minimization problems. Unlike most existing results focusing on final iterate lower bounds in terms of the number of components $n$ and the number of epochs $K$, we seek bounds for arbitrary weighted average iterates that are tight in all factors including the condition number $\kappa$. For SGD with Random Reshuffling, we present lower bounds that have tighter $\kappa$ dependencies than existing bounds. Our results are the first to perfectly close the gap between lower and upper bounds for weighted average iterates in both strongly-convex and convex cases. We also prove weighted average iterate lower bounds for arbitrary permutation-based SGD, which apply to all variants that carefully choose the best permutation. Our bounds improve the existing bounds in factors of $n$ and $\kappa$ and thereby match the upper bounds shown for a recently proposed algorithm called GraB.</p>
+<p class=pub-abstract>We investigate how pair-wise data augmentation techniques like Mixup affect the sample complexity of finding optimal decision boundaries in a binary linear classification problem. For a family of data distributions with a separability constant $\kappa$, we analyze how well the optimal classifier in terms of training loss aligns with the optimal one in test accuracy (i.e., Bayes optimal classifier). For vanilla training without augmentation, we uncover an interesting phenomenon named the curse of separability. As we increase $\kappa$ to make the data distribution more separable, the sample complexity of vanilla training increases exponentially in $\kappa$; perhaps surprisingly, the task of finding optimal decision boundaries becomes harder for more separable distributions. For Mixup training, we show that Mixup mitigates this problem by significantly reducing the sample complexity. To this end, we develop new concentration results applicable to $n^2$ pair-wise augmented data points constructed from $n$ independent data, by carefully dealing with dependencies between overlapping pairs. Lastly, we study other masking-based Mixup-style techniques and show that they can distort the training loss and make its minimizer converge to a suboptimal classifier in terms of test accuracy.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -142,7 +137,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>International Conference on Machine Learning 2023</em> <em><strong>(Oral Presentation)</strong></em></div>
+<div class="col-12 col-md-9"><em>International Conference on Machine Learning 2023</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
