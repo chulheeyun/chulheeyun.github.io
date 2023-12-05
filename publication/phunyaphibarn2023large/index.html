@@ -8,7 +8,7 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="Paper in preparation; abstract to be updated soon.">
+<meta name=description content="Although gradient descent with momentum is widely used in modern deep learning, a concrete understanding of its effects on the training trajectory still remains elusive. In this work, we empirically show that momentum gradient descent with a large learning rate and learning rate warmup displays large catapults, driving the iterates towards flatter minima than those found by gradient descent. We then provide empirical evidence and theoretical intuition that the large catapult is caused by momentum “amplifying” the self-stabilization effect (Damian et al., 2023).">
 <link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/phunyaphibarn2023large/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
@@ -25,11 +25,11 @@
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
 <meta property="og:url" content="https://chulheeyun.github.io/publication/phunyaphibarn2023large/">
 <meta property="og:title" content="Large Catapults in Momentum Gradient Descent with Warmup: An Empirical Study | Chulhee “Charlie” Yun">
-<meta property="og:description" content="Paper in preparation; abstract to be updated soon."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:description" content="Although gradient descent with momentum is widely used in modern deep learning, a concrete understanding of its effects on the training trajectory still remains elusive. In this work, we empirically show that momentum gradient descent with a large learning rate and learning rate warmup displays large catapults, driving the iterates towards flatter minima than those found by gradient descent. We then provide empirical evidence and theoretical intuition that the large catapult is caused by momentum “amplifying” the self-stabilization effect (Damian et al., 2023)."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
 <meta property="article:modified_time" content="2023-10-28T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/phunyaphibarn2023large/"},"headline":"Large Catapults in Momentum Gradient Descent with Warmup: An Empirical Study","datePublished":"2023-10-28T00:00:00Z","dateModified":"2023-10-28T00:00:00Z","author":{"@type":"Person","name":"Prin Phunyaphibarn"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Paper in preparation; abstract to be updated soon."}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/phunyaphibarn2023large/"},"headline":"Large Catapults in Momentum Gradient Descent with Warmup: An Empirical Study","datePublished":"2023-10-28T00:00:00Z","dateModified":"2023-10-28T00:00:00Z","author":{"@type":"Person","name":"Prin Phunyaphibarn"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Although gradient descent with momentum is widely used in modern deep learning, a concrete understanding of its effects on the training trajectory still remains elusive. In this work, we empirically show that momentum gradient descent with a large learning rate and learning rate warmup displays large catapults, driving the iterates towards flatter minima than those found by gradient descent. We then provide empirical evidence and theoretical intuition that the large catapult is caused by momentum “amplifying” the self-stabilization effect (Damian et al., 2023)."}</script>
 <title>Large Catapults in Momentum Gradient Descent with Warmup: An Empirical Study | Chulhee “Charlie” Yun</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=200a5b9ea65d0b341b7b0ce92e961f56>
@@ -116,10 +116,14 @@ Chulhee Yun</span>
 October 2023
 </span>
 </div>
+<div class="btn-links mb-3">
+<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2311.15051 target=_blank rel=noopener>
+arXiv</a>
+</div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Paper in preparation; abstract to be updated soon.</p>
+<p class=pub-abstract>Although gradient descent with momentum is widely used in modern deep learning, a concrete understanding of its effects on the training trajectory still remains elusive. In this work, we empirically show that momentum gradient descent with a large learning rate and learning rate warmup displays large catapults, driving the iterates towards flatter minima than those found by gradient descent. We then provide empirical evidence and theoretical intuition that the large catapult is caused by momentum “amplifying” the self-stabilization effect (Damian et al., 2023).</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -140,7 +144,7 @@ Preprint
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>In preparation</em></div>
+<div class="col-12 col-md-9"><em>arXiv preprint</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
