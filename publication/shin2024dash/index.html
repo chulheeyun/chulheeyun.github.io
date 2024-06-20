@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="Even for simple arithmetic tasks like integer addition, it is challenging for Transformers to generalize to longer sequences than those encountered during training. To tackle this problem, we propose position coupling, a simple yet effective method that directly embeds the structure of the tasks into the positional encoding of a (decoder-only) Transformer. Taking a departure from the vanilla absolute position mechanism assigning unique position IDs to each of the tokens, we assign the same position IDs to two or more “relevant” tokens; for integer addition tasks, we regard digits of the same significance as in the same position. On the empirical side, we show that with the proposed position coupling, a small (1-layer) Transformer trained on 1 to 30-digit additions can generalize up to 200-digit additions (6.67x of the trained length). On the theoretical side, we prove that a 1-layer Transformer with coupled positions can solve the addition task involving exponentially many digits, whereas any 1-layer Transformer without positional information cannot entirely solve it. We also demonstrate that position coupling can be applied to other algorithmic tasks such as addition with multiple summands, Nx2 multiplication, copy/reverse, and a two-dimensional task.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/cho2024position/>
+<meta name=description content="Warm-starting neural networks by initializing them with previously learned weights is appealing, as practical neural networks are often deployed under a continuous influx of new data. However, this often leads to a phenomenon known as loss of plasticity, where the network loses its ability to learn new information and thereby shows worse generalization performance than those trained from scratch. While this issue has been actively studied in non-stationary data distributions, it surprisingly occurs even when the data distribution remains stationary, and its underlying mechanism is poorly understood. To address this gap, we develop a framework emulating real-world neural network training. Under this framework, we identify noise memorization as the primary cause of plasticity loss when warm-starting networks on stationary data. Motivated by this discovery, we propose Direction-Aware SHrinking (DASH), an effective method aiming to mitigate plasticity loss by selectively forgetting memorized noise while preserving learned features. We validate our approach on vision classification task, demonstrating consistent improvements in test accuracy and training efficiency.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/shin2024dash/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/cho2024position/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/shin2024dash/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/cho2024position/">
-<meta property="og:title" content="Position Coupling: Leveraging Task Structure for Improved Length Generalization of Transformers | Chulhee “Charlie” Yun">
-<meta property="og:description" content="Even for simple arithmetic tasks like integer addition, it is challenging for Transformers to generalize to longer sequences than those encountered during training. To tackle this problem, we propose position coupling, a simple yet effective method that directly embeds the structure of the tasks into the positional encoding of a (decoder-only) Transformer. Taking a departure from the vanilla absolute position mechanism assigning unique position IDs to each of the tokens, we assign the same position IDs to two or more “relevant” tokens; for integer addition tasks, we regard digits of the same significance as in the same position. On the empirical side, we show that with the proposed position coupling, a small (1-layer) Transformer trained on 1 to 30-digit additions can generalize up to 200-digit additions (6.67x of the trained length). On the theoretical side, we prove that a 1-layer Transformer with coupled positions can solve the addition task involving exponentially many digits, whereas any 1-layer Transformer without positional information cannot entirely solve it. We also demonstrate that position coupling can be applied to other algorithmic tasks such as addition with multiple summands, Nx2 multiplication, copy/reverse, and a two-dimensional task."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/shin2024dash/">
+<meta property="og:title" content="DASH: Warm-Starting Neural Network Training Without Loss of Plasticity Under Stationarity | Chulhee “Charlie” Yun">
+<meta property="og:description" content="Warm-starting neural networks by initializing them with previously learned weights is appealing, as practical neural networks are often deployed under a continuous influx of new data. However, this often leads to a phenomenon known as loss of plasticity, where the network loses its ability to learn new information and thereby shows worse generalization performance than those trained from scratch. While this issue has been actively studied in non-stationary data distributions, it surprisingly occurs even when the data distribution remains stationary, and its underlying mechanism is poorly understood. To address this gap, we develop a framework emulating real-world neural network training. Under this framework, we identify noise memorization as the primary cause of plasticity loss when warm-starting networks on stationary data. Motivated by this discovery, we propose Direction-Aware SHrinking (DASH), an effective method aiming to mitigate plasticity loss by selectively forgetting memorized noise while preserving learned features. We validate our approach on vision classification task, demonstrating consistent improvements in test accuracy and training efficiency."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2024-05-31T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/cho2024position/"},"headline":"Position Coupling: Leveraging Task Structure for Improved Length Generalization of Transformers","datePublished":"2023-10-28T00:00:00Z","dateModified":"2024-05-31T00:00:00Z","author":{"@type":"Person","name":"Hanseul Cho"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Even for simple arithmetic tasks like integer addition, it is challenging for Transformers to generalize to longer sequences than those encountered during training. To tackle this problem, we propose position coupling, a simple yet effective method that directly embeds the structure of the tasks into the positional encoding of a (decoder-only) Transformer. Taking a departure from the vanilla absolute position mechanism assigning unique position IDs to each of the tokens, we assign the same position IDs to two or more “relevant” tokens; for integer addition tasks, we regard digits of the same significance as in the same position. On the empirical side, we show that with the proposed position coupling, a small (1-layer) Transformer trained on 1 to 30-digit additions can generalize up to 200-digit additions (6.67x of the trained length). On the theoretical side, we prove that a 1-layer Transformer with coupled positions can solve the addition task involving exponentially many digits, whereas any 1-layer Transformer without positional information cannot entirely solve it. We also demonstrate that position coupling can be applied to other algorithmic tasks such as addition with multiple summands, Nx2 multiplication, copy/reverse, and a two-dimensional task."}</script>
-<title>Position Coupling: Leveraging Task Structure for Improved Length Generalization of Transformers | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2024-06-19T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/shin2024dash/"},"headline":"DASH: Warm-Starting Neural Network Training Without Loss of Plasticity Under Stationarity","datePublished":"2023-10-28T00:00:00Z","dateModified":"2024-06-19T00:00:00Z","author":{"@type":"Person","name":"Baekrok Shin"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Warm-starting neural networks by initializing them with previously learned weights is appealing, as practical neural networks are often deployed under a continuous influx of new data. However, this often leads to a phenomenon known as loss of plasticity, where the network loses its ability to learn new information and thereby shows worse generalization performance than those trained from scratch. While this issue has been actively studied in non-stationary data distributions, it surprisingly occurs even when the data distribution remains stationary, and its underlying mechanism is poorly understood. To address this gap, we develop a framework emulating real-world neural network training. Under this framework, we identify noise memorization as the primary cause of plasticity loss when warm-starting networks on stationary data. Motivated by this discovery, we propose Direction-Aware SHrinking (DASH), an effective method aiming to mitigate plasticity loss by selectively forgetting memorized noise while preserving learned features. We validate our approach on vision classification task, demonstrating consistent improvements in test accuracy and training efficiency."}</script>
+<title>DASH: Warm-Starting Neural Network Training Without Loss of Plasticity Under Stationarity | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=21849ca8369ee8a82067f992c8285ec2>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=b18cec31d7727120c8b7029e8ceda23f>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,29 +102,23 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Position Coupling: Leveraging Task Structure for Improved Length Generalization of Transformers</h1>
+<h1>DASH: Warm-Starting Neural Network Training Without Loss of Plasticity Under Stationarity</h1>
 <div class=article-metadata>
 <div>
 <span>
-Hanseul Cho</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
-Jaeyoung Cha</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
-Pranjal Awasthi</span>, <span>
-Srinadh Bhojanapalli</span>, <span>
-Anupam Gupta</span>, <span class=author-highlighted>
+Baekrok Shin</span>, <span>
+Junsoo Oh</span>, <span>
+Hanseul Cho</span>, <span class=author-highlighted>
 Chulhee Yun</span>
 </div>
 <span class=article-date>
-May 2024
+June 2024
 </span>
-</div>
-<div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2405.20671 target=_blank rel=noopener>
-arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Even for simple arithmetic tasks like integer addition, it is challenging for Transformers to generalize to longer sequences than those encountered during training. To tackle this problem, we propose position coupling, a simple yet effective method that directly embeds the structure of the tasks into the positional encoding of a (decoder-only) Transformer. Taking a departure from the vanilla absolute position mechanism assigning unique position IDs to each of the tokens, we assign the same position IDs to two or more “relevant” tokens; for integer addition tasks, we regard digits of the same significance as in the same position. On the empirical side, we show that with the proposed position coupling, a small (1-layer) Transformer trained on 1 to 30-digit additions can generalize up to 200-digit additions (6.67x of the trained length). On the theoretical side, we prove that a 1-layer Transformer with coupled positions can solve the addition task involving exponentially many digits, whereas any 1-layer Transformer without positional information cannot entirely solve it. We also demonstrate that position coupling can be applied to other algorithmic tasks such as addition with multiple summands, Nx2 multiplication, copy/reverse, and a two-dimensional task.</p>
+<p class=pub-abstract>Warm-starting neural networks by initializing them with previously learned weights is appealing, as practical neural networks are often deployed under a continuous influx of new data. However, this often leads to a phenomenon known as loss of plasticity, where the network loses its ability to learn new information and thereby shows worse generalization performance than those trained from scratch. While this issue has been actively studied in non-stationary data distributions, it surprisingly occurs even when the data distribution remains stationary, and its underlying mechanism is poorly understood. To address this gap, we develop a framework emulating real-world neural network training. Under this framework, we identify noise memorization as the primary cause of plasticity loss when warm-starting networks on stationary data. Motivated by this discovery, we propose Direction-Aware SHrinking (DASH), an effective method aiming to mitigate plasticity loss by selectively forgetting memorized noise while preserving learned features. We validate our approach on vision classification task, demonstrating consistent improvements in test accuracy and training efficiency.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -145,7 +139,7 @@ Preprint
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>ICML 2024 Workshop on Long-Context Foundation Models</em></div>
+<div class="col-12 col-md-9"><em>ICML 2024 Workshop on Advancing Neural Network Training: Computational Efficiency, Scalability, and Resource Optimization</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
