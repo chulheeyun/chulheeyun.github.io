@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="In minimax optimization, the extragradient (EG) method has been extensively studied because it outperforms the gradient descent-ascent method in convex-concave (C-C) problems. Yet, stochastic EG (SEG) has seen limited success in C-C problems, especially for unconstrained cases. Motivated by the recent progress of shuffling-based stochastic methods, we investigate the convergence of shuffling-based SEG in unconstrained finite-sum minimax problems, in search of convergent shuffling-based SEG. Our analysis reveals that both random reshuffling and the recently proposed flip-flop shuffling alone can suffer divergence in C-C problems. However, with an additional simple trick called anchoring, we develop the SEG with flip-flop anchoring (SEG-FFA) method which successfully converges in C-C problems. We also show upper and lower bounds in the strongly-convex-strongly-concave setting, demonstrating that SEG-FFA has a provably faster convergence rate compared to other shuffling-based methods.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/chae2024stochastic/>
+<meta name=description content="Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce a Difficulty and Uncertainty-Aware Lightweight (DUAL) score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning, we further propose a ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\% compared to previous methods while achieving a SOTA, specifically 60\% test accuracy at a 90\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\% while maintaining SOTA performance.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/cho2025lightweight/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/chae2024stochastic/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/cho2025lightweight/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/chae2024stochastic/">
-<meta property="og:title" content="Stochastic Extragradient with Flip-Flop Shuffling & Anchoring: Provable Improvements | Chulhee “Charlie” Yun">
-<meta property="og:description" content="In minimax optimization, the extragradient (EG) method has been extensively studied because it outperforms the gradient descent-ascent method in convex-concave (C-C) problems. Yet, stochastic EG (SEG) has seen limited success in C-C problems, especially for unconstrained cases. Motivated by the recent progress of shuffling-based stochastic methods, we investigate the convergence of shuffling-based SEG in unconstrained finite-sum minimax problems, in search of convergent shuffling-based SEG. Our analysis reveals that both random reshuffling and the recently proposed flip-flop shuffling alone can suffer divergence in C-C problems. However, with an additional simple trick called anchoring, we develop the SEG with flip-flop anchoring (SEG-FFA) method which successfully converges in C-C problems. We also show upper and lower bounds in the strongly-convex-strongly-concave setting, demonstrating that SEG-FFA has a provably faster convergence rate compared to other shuffling-based methods."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/cho2025lightweight/">
+<meta property="og:title" content="Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty | Chulhee “Charlie” Yun">
+<meta property="og:description" content="Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce a Difficulty and Uncertainty-Aware Lightweight (DUAL) score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning, we further propose a ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\% compared to previous methods while achieving a SOTA, specifically 60\% test accuracy at a 90\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\% while maintaining SOTA performance."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2024-09-26T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/chae2024stochastic/"},"headline":"Stochastic Extragradient with Flip-Flop Shuffling \u0026 Anchoring: Provable Improvements","datePublished":"2023-10-28T00:00:00Z","dateModified":"2024-09-26T00:00:00Z","author":{"@type":"Person","name":"Jiseok Chae"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"In minimax optimization, the extragradient (EG) method has been extensively studied because it outperforms the gradient descent-ascent method in convex-concave (C-C) problems. Yet, stochastic EG (SEG) has seen limited success in C-C problems, especially for unconstrained cases. Motivated by the recent progress of shuffling-based stochastic methods, we investigate the convergence of shuffling-based SEG in unconstrained finite-sum minimax problems, in search of convergent shuffling-based SEG. Our analysis reveals that both random reshuffling and the recently proposed flip-flop shuffling alone can suffer divergence in C-C problems. However, with an additional simple trick called anchoring, we develop the SEG with flip-flop anchoring (SEG-FFA) method which successfully converges in C-C problems. We also show upper and lower bounds in the strongly-convex-strongly-concave setting, demonstrating that SEG-FFA has a provably faster convergence rate compared to other shuffling-based methods."}</script>
-<title>Stochastic Extragradient with Flip-Flop Shuffling & Anchoring: Provable Improvements | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2025-02-10T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/cho2025lightweight/"},"headline":"Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-02-10T00:00:00Z","author":{"@type":"Person","name":"Yeseul Cho"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce a Difficulty and Uncertainty-Aware Lightweight (DUAL) score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning, we further propose a ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\\% compared to previous methods while achieving a SOTA, specifically 60\\% test accuracy at a 90\\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\\% while maintaining SOTA performance."}</script>
+<title>Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=1e4fc555eb0e35eaba8963121f67df33>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=d4f5e515844c4b4078bd2a01dcd6bebe>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,36 +102,35 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Stochastic Extragradient with Flip-Flop Shuffling & Anchoring: Provable Improvements</h1>
+<h1>Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty</h1>
 <div class=article-metadata>
 <div>
 <span>
-Jiseok Chae</span>, <span class=author-highlighted>
-Chulhee Yun</span>, <span>
-Donghwan Kim</span>
+Yeseul Cho</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
+Baekrok Shin</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
+Changmin Kang</span>, <span class=author-highlighted>
+Chulhee Yun</span>
 </div>
 <span class=article-date>
-September 2024
+February 2025
 </span>
 </div>
 <div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href="https://openreview.net/forum?id=OJxua0PAIo" target=_blank rel=noopener>
-Paper</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2501.00511 target=_blank rel=noopener>
+<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2502.06905 target=_blank rel=noopener>
 arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>In minimax optimization, the extragradient (EG) method has been extensively studied because it outperforms the gradient descent-ascent method in convex-concave (C-C) problems. Yet, stochastic EG (SEG) has seen limited success in C-C problems, especially for unconstrained cases. Motivated by the recent progress of shuffling-based stochastic methods, we investigate the convergence of shuffling-based SEG in unconstrained finite-sum minimax problems, in search of convergent shuffling-based SEG. Our analysis reveals that both random reshuffling and the recently proposed flip-flop shuffling alone can suffer divergence in C-C problems. However, with an additional simple trick called anchoring, we develop the SEG with flip-flop anchoring (SEG-FFA) method which successfully converges in C-C problems. We also show upper and lower bounds in the strongly-convex-strongly-concave setting, demonstrating that SEG-FFA has a provably faster convergence rate compared to other shuffling-based methods.</p>
+<p class=pub-abstract>Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce a Difficulty and Uncertainty-Aware Lightweight (DUAL) score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning, we further propose a ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66% compared to previous methods while achieving a SOTA, specifically 60% test accuracy at a 90% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15% while maintaining SOTA performance.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Type</div>
 <div class="col-12 col-md-9">
-<a href=/publication/#1>
-Conference paper
+<a href=/publication/#3>
+Preprint
 </a>
 </div>
 </div>
@@ -144,7 +143,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>Neural Information Processing Systems 2024</em></div>
+<div class="col-12 col-md-9"><em>arXiv preprint</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
