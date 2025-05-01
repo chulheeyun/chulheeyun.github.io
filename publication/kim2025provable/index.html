@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="We study continual learning on multiple linear classification tasks by sequentially running gradient descent (GD) for a fixed budget of iterations per each given task. When all tasks are jointly linearly separable and are presented in a cyclic/random order, we show the directional convergence of the trained linear classifier to the joint (offline) max-margin solution. This is surprising because GD training on a single task is implicitly biased towards the individual max-margin solution for the task, and the direction of the joint max-margin solution can be largely different from these individual solutions. Additionally, when tasks are given in a cyclic order, we present a non-asymptotic analysis on cycle-averaged forgetting, revealing that (1) alignment between tasks is indeed closely tied to catastrophic forgetting and backward knowledge transfer and (2) the amount of forgetting vanishes to zero as the cycle repeats. Lastly, we analyze the case where the tasks are no longer jointly separable and show that the model trained in a cyclic order converges to the unique minimum of the joint loss function.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/jung2025convergence/>
+<meta name=description content="We analyze the convergence rates of two popular variants of coordinate descent (CD): random CD (RCD), in which the coordinates are sampled uniformly at random, and random-permutation CD (RPCD), in which random permutations are used to select the update indices. Despite abundant empirical evidence that RPCD outperforms RCD in various tasks, the theoretical gap between the two algorithms’ performance has remained elusive. Even for the benign case of positive-definite quadratic functions with permutation-invariant Hessians, previous efforts have failed to demonstrate a provable performance gap between RCD and RPCD. To this end, we present novel results showing that, for a class of quadratics with permutation-invariant structures, the contraction rate upper bound for RPCD is always strictly smaller than the contraction rate lower bound for RCD for every individual problem instance. Furthermore, we conjecture that this function class contains the worst-case examples of RPCD among all positive-definite quadratics. Combined with our RCD lower bound, this conjecture extends our results to the general class of positive-definite quadratic functions.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/kim2025provable/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/jung2025convergence/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/kim2025provable/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/jung2025convergence/">
-<meta property="og:title" content="Convergence and Implicit Bias of Gradient Descent on Continual Linear Classification | Chulhee “Charlie” Yun">
-<meta property="og:description" content="We study continual learning on multiple linear classification tasks by sequentially running gradient descent (GD) for a fixed budget of iterations per each given task. When all tasks are jointly linearly separable and are presented in a cyclic/random order, we show the directional convergence of the trained linear classifier to the joint (offline) max-margin solution. This is surprising because GD training on a single task is implicitly biased towards the individual max-margin solution for the task, and the direction of the joint max-margin solution can be largely different from these individual solutions. Additionally, when tasks are given in a cyclic order, we present a non-asymptotic analysis on cycle-averaged forgetting, revealing that (1) alignment between tasks is indeed closely tied to catastrophic forgetting and backward knowledge transfer and (2) the amount of forgetting vanishes to zero as the cycle repeats. Lastly, we analyze the case where the tasks are no longer jointly separable and show that the model trained in a cyclic order converges to the unique minimum of the joint loss function."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/kim2025provable/">
+<meta property="og:title" content="Provable Benefit of Random Permutations over Uniform Sampling in Stochastic Coordinate Descent | Chulhee “Charlie” Yun">
+<meta property="og:description" content="We analyze the convergence rates of two popular variants of coordinate descent (CD): random CD (RCD), in which the coordinates are sampled uniformly at random, and random-permutation CD (RPCD), in which random permutations are used to select the update indices. Despite abundant empirical evidence that RPCD outperforms RCD in various tasks, the theoretical gap between the two algorithms’ performance has remained elusive. Even for the benign case of positive-definite quadratic functions with permutation-invariant Hessians, previous efforts have failed to demonstrate a provable performance gap between RCD and RPCD. To this end, we present novel results showing that, for a class of quadratics with permutation-invariant structures, the contraction rate upper bound for RPCD is always strictly smaller than the contraction rate lower bound for RCD for every individual problem instance. Furthermore, we conjecture that this function class contains the worst-case examples of RPCD among all positive-definite quadratics. Combined with our RCD lower bound, this conjecture extends our results to the general class of positive-definite quadratic functions."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2025-01-22T02:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/jung2025convergence/"},"headline":"Convergence and Implicit Bias of Gradient Descent on Continual Linear Classification","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-01-22T02:00:00Z","author":{"@type":"Person","name":"Hyunji Jung"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"We study continual learning on multiple linear classification tasks by sequentially running gradient descent (GD) for a fixed budget of iterations per each given task. When all tasks are jointly linearly separable and are presented in a cyclic/random order, we show the directional convergence of the trained linear classifier to the joint (offline) max-margin solution. This is surprising because GD training on a single task is implicitly biased towards the individual max-margin solution for the task, and the direction of the joint max-margin solution can be largely different from these individual solutions. Additionally, when tasks are given in a cyclic order, we present a non-asymptotic analysis on cycle-averaged forgetting, revealing that (1) alignment between tasks is indeed closely tied to catastrophic forgetting and backward knowledge transfer and (2) the amount of forgetting vanishes to zero as the cycle repeats. Lastly, we analyze the case where the tasks are no longer jointly separable and show that the model trained in a cyclic order converges to the unique minimum of the joint loss function."}</script>
-<title>Convergence and Implicit Bias of Gradient Descent on Continual Linear Classification | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2025-05-01T02:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/kim2025provable/"},"headline":"Provable Benefit of Random Permutations over Uniform Sampling in Stochastic Coordinate Descent","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-05-01T02:00:00Z","author":{"@type":"Person","name":"Donghwa Kim"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"We analyze the convergence rates of two popular variants of coordinate descent (CD): random CD (RCD), in which the coordinates are sampled uniformly at random, and random-permutation CD (RPCD), in which random permutations are used to select the update indices. Despite abundant empirical evidence that RPCD outperforms RCD in various tasks, the theoretical gap between the two algorithms’ performance has remained elusive. Even for the benign case of positive-definite quadratic functions with permutation-invariant Hessians, previous efforts have failed to demonstrate a provable performance gap between RCD and RPCD. To this end, we present novel results showing that, for a class of quadratics with permutation-invariant structures, the contraction rate upper bound for RPCD is always strictly smaller than the contraction rate lower bound for RCD for every individual problem instance. Furthermore, we conjecture that this function class contains the worst-case examples of RPCD among all positive-definite quadratics. Combined with our RCD lower bound, this conjecture extends our results to the general class of positive-definite quadratic functions."}</script>
+<title>Provable Benefit of Random Permutations over Uniform Sampling in Stochastic Coordinate Descent | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=782c0ef81cc7fea12e214607e4193a60>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=4a83e9e3ab6ad4a6ef678b2a49739837>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,28 +102,22 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Convergence and Implicit Bias of Gradient Descent on Continual Linear Classification</h1>
+<h1>Provable Benefit of Random Permutations over Uniform Sampling in Stochastic Coordinate Descent</h1>
 <div class=article-metadata>
 <div>
 <span>
-Hyunji Jung</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
-Hanseul Cho</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span class=author-highlighted>
+Donghwa Kim</span>, <span>
+Jaewook Lee</span>, <span class=author-highlighted>
 Chulhee Yun</span>
 </div>
 <span class=article-date>
-January 2025
+May 2025
 </span>
-</div>
-<div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href="https://openreview.net/forum?id=DTqx3iqjkz" target=_blank rel=noopener>
-Paper</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2504.12712 target=_blank rel=noopener>
-arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>We study continual learning on multiple linear classification tasks by sequentially running gradient descent (GD) for a fixed budget of iterations per each given task. When all tasks are jointly linearly separable and are presented in a cyclic/random order, we show the directional convergence of the trained linear classifier to the joint (offline) max-margin solution. This is surprising because GD training on a single task is implicitly biased towards the individual max-margin solution for the task, and the direction of the joint max-margin solution can be largely different from these individual solutions. Additionally, when tasks are given in a cyclic order, we present a non-asymptotic analysis on cycle-averaged forgetting, revealing that (1) alignment between tasks is indeed closely tied to catastrophic forgetting and backward knowledge transfer and (2) the amount of forgetting vanishes to zero as the cycle repeats. Lastly, we analyze the case where the tasks are no longer jointly separable and show that the model trained in a cyclic order converges to the unique minimum of the joint loss function.</p>
+<p class=pub-abstract>We analyze the convergence rates of two popular variants of coordinate descent (CD): random CD (RCD), in which the coordinates are sampled uniformly at random, and random-permutation CD (RPCD), in which random permutations are used to select the update indices. Despite abundant empirical evidence that RPCD outperforms RCD in various tasks, the theoretical gap between the two algorithms’ performance has remained elusive. Even for the benign case of positive-definite quadratic functions with permutation-invariant Hessians, previous efforts have failed to demonstrate a provable performance gap between RCD and RPCD. To this end, we present novel results showing that, for a class of quadratics with permutation-invariant structures, the contraction rate upper bound for RPCD is always strictly smaller than the contraction rate lower bound for RCD for every individual problem instance. Furthermore, we conjecture that this function class contains the worst-case examples of RPCD among all positive-definite quadratics. Combined with our RCD lower bound, this conjecture extends our results to the general class of positive-definite quadratic functions.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -144,7 +138,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>International Conference on Learning Representations 2025</em></div>
+<div class="col-12 col-md-9"><em>International Conference on Machine Learning 2025</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
