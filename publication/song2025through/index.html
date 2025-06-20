@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the **Difficulty and Uncertainty-Aware Lightweight (DUAL)** score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\% compared to previous methods while achieving a SOTA 60\% test accuracy at a 90\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\% while maintaining SOTA performance.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/cho2025lightweight/>
+<meta name=description content="As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets—such as cosine learning rate schedules—are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/song2025through/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/cho2025lightweight/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/song2025through/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/cho2025lightweight/">
-<meta property="og:title" content="Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty | Chulhee “Charlie” Yun">
-<meta property="og:description" content="Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the **Difficulty and Uncertainty-Aware Lightweight (DUAL)** score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\% compared to previous methods while achieving a SOTA 60\% test accuracy at a 90\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\% while maintaining SOTA performance."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/song2025through/">
+<meta property="og:title" content="Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training | Chulhee “Charlie” Yun">
+<meta property="og:description" content="As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets—such as cosine learning rate schedules—are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2025-02-10T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/cho2025lightweight/"},"headline":"Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-02-10T00:00:00Z","author":{"@type":"Person","name":"Yeseul Cho"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the **Difficulty and Uncertainty-Aware Lightweight (DUAL)** score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\\% compared to previous methods while achieving a SOTA 60\\% test accuracy at a 90\\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\\% while maintaining SOTA performance."}</script>
-<title>Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2025-06-10T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/song2025through/"},"headline":"Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-06-10T00:00:00Z","author":{"@type":"Person","name":"Minhak Song"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets—such as cosine learning rate schedules—are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training."}</script>
+<title>Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=d4f5e515844c4b4078bd2a01dcd6bebe>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=eac28574035c87c84d2f609c59aa0061>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,37 +102,31 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty</h1>
+<h1>Through the River: Understanding the Benefit of Schedule-Free Methods for Language Model Training</h1>
 <div class=article-metadata>
 <div>
 <span>
-Yeseul Cho</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
-Baekrok Shin</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
-Changmin Kang</span>, <span class=author-highlighted>
+Minhak Song</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
+Beomhan Baek</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
+Kwangjun Ahn</span>, <span class=author-highlighted>
 Chulhee Yun</span>
 </div>
 <span class=article-date>
-February 2025
+June 2025
 </span>
-</div>
-<div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href="https://openreview.net/forum?id=9rLxi2cnZC" target=_blank rel=noopener>
-Paper</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2502.06905 target=_blank rel=noopener>
-arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the <strong>Difficulty and Uncertainty-Aware Lightweight (DUAL)</strong> score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66% compared to previous methods while achieving a SOTA 60% test accuracy at a 90% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15% while maintaining SOTA performance.</p>
+<p class=pub-abstract>As both model and dataset sizes continue to scale rapidly, conventional pretraining strategies with fixed compute budgets—such as cosine learning rate schedules—are increasingly inadequate for large-scale training. Recent alternatives, including warmup-stable-decay (WSD) schedules and weight averaging, offer greater flexibility. However, WSD relies on explicit decay phases to track progress, while weight averaging addresses this limitation at the cost of additional memory. In search of a more principled and scalable alternative, we revisit the Schedule-Free (SF) method [Defazio et al., 2024], which has shown strong empirical performance across diverse settings. We show that SF-AdamW effectively navigates the “river” structure of the loss landscape without decay phases or auxiliary averaging, making it particularly suitable for continuously scaling training workloads. To understand this behavior, we conduct a theoretical and empirical analysis of SF dynamics, revealing that it implicitly performs weight averaging without memory overhead. Guided by this analysis, we propose a refined variant of SF that improves robustness to momentum and performs better under large batch sizes, addressing key limitations of the original method. Together, these results establish SF as a practical, scalable, and theoretically grounded approach for language model training.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Type</div>
 <div class="col-12 col-md-9">
-<a href=/publication/#1>
-Conference paper
+<a href=/publication/#3>
+Preprint
 </a>
 </div>
 </div>
@@ -145,7 +139,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>International Conference on Machine Learning 2025</em></div>
+<div class="col-12 col-md-9"><em>ICML 2025 Workshop on High-dimensional Learning Dynamics (HiLD)</em></div>
 </div>
 </div>
 <div class=col-md-1></div>

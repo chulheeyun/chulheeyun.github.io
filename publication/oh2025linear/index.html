@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the **Difficulty and Uncertainty-Aware Lightweight (DUAL)** score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\% compared to previous methods while achieving a SOTA 60\% test accuracy at a 90\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\% while maintaining SOTA performance.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/cho2025lightweight/>
+<meta name=description content="Weak-to-strong generalization refers to the phenomenon where a stronger model trained under supervision from a weaker one can outperform its teacher. While prior studies aim to explain this effect, most theoretical insights are limited to abstract frameworks or linear/random feature models. In this paper, we provide a formal analysis of weak-to-strong generalization from a linear CNN (weak) to a two-layer ReLU CNN (strong). We consider structured data composed of label-dependent signals of varying difficulty and label-independent noise, and analyze gradient descent dynamics when the strong model is trained on data labeled by the pretrained weak model. Our analysis identifies two regimes—data-scarce and data-abundant—based on the signal-to-noise characteristics of the dataset, and reveals distinct mechanisms of weak-to-strong generalization. In the data-scarce regime, generalization occurs via benign overfitting or fails via harmful overfitting, depending on the amount of data, and we characterize the transition boundary. In the data-abundant regime, generalization emerges in the early phase through label correction, but we observe that overtraining can subsequently degrade performance.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/oh2025linear/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/cho2025lightweight/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/oh2025linear/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/cho2025lightweight/">
-<meta property="og:title" content="Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty | Chulhee “Charlie” Yun">
-<meta property="og:description" content="Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the **Difficulty and Uncertainty-Aware Lightweight (DUAL)** score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\% compared to previous methods while achieving a SOTA 60\% test accuracy at a 90\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\% while maintaining SOTA performance."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/oh2025linear/">
+<meta property="og:title" content="From Linear to Nonlinear: Provable Weak-to-Strong Generalization through Feature Learning | Chulhee “Charlie” Yun">
+<meta property="og:description" content="Weak-to-strong generalization refers to the phenomenon where a stronger model trained under supervision from a weaker one can outperform its teacher. While prior studies aim to explain this effect, most theoretical insights are limited to abstract frameworks or linear/random feature models. In this paper, we provide a formal analysis of weak-to-strong generalization from a linear CNN (weak) to a two-layer ReLU CNN (strong). We consider structured data composed of label-dependent signals of varying difficulty and label-independent noise, and analyze gradient descent dynamics when the strong model is trained on data labeled by the pretrained weak model. Our analysis identifies two regimes—data-scarce and data-abundant—based on the signal-to-noise characteristics of the dataset, and reveals distinct mechanisms of weak-to-strong generalization. In the data-scarce regime, generalization occurs via benign overfitting or fails via harmful overfitting, depending on the amount of data, and we characterize the transition boundary. In the data-abundant regime, generalization emerges in the early phase through label correction, but we observe that overtraining can subsequently degrade performance."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2025-02-10T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/cho2025lightweight/"},"headline":"Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-02-10T00:00:00Z","author":{"@type":"Person","name":"Yeseul Cho"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the **Difficulty and Uncertainty-Aware Lightweight (DUAL)** score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66\\% compared to previous methods while achieving a SOTA 60\\% test accuracy at a 90\\% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15\\% while maintaining SOTA performance."}</script>
-<title>Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2025-06-10T01:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/oh2025linear/"},"headline":"From Linear to Nonlinear: Provable Weak-to-Strong Generalization through Feature Learning","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-06-10T01:00:00Z","author":{"@type":"Person","name":"Junsoo Oh"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Weak-to-strong generalization refers to the phenomenon where a stronger model trained under supervision from a weaker one can outperform its teacher. While prior studies aim to explain this effect, most theoretical insights are limited to abstract frameworks or linear/random feature models. In this paper, we provide a formal analysis of weak-to-strong generalization from a linear CNN (weak) to a two-layer ReLU CNN (strong). We consider structured data composed of label-dependent signals of varying difficulty and label-independent noise, and analyze gradient descent dynamics when the strong model is trained on data labeled by the pretrained weak model. Our analysis identifies two regimes—data-scarce and data-abundant—based on the signal-to-noise characteristics of the dataset, and reveals distinct mechanisms of weak-to-strong generalization. In the data-scarce regime, generalization occurs via benign overfitting or fails via harmful overfitting, depending on the amount of data, and we characterize the transition boundary. In the data-abundant regime, generalization emerges in the early phase through label correction, but we observe that overtraining can subsequently degrade performance."}</script>
+<title>From Linear to Nonlinear: Provable Weak-to-Strong Generalization through Feature Learning | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=d4f5e515844c4b4078bd2a01dcd6bebe>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=07168403a9241c8e55a6c4777b3dfbde>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,37 +102,30 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty</h1>
+<h1>From Linear to Nonlinear: Provable Weak-to-Strong Generalization through Feature Learning</h1>
 <div class=article-metadata>
 <div>
 <span>
-Yeseul Cho</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
-Baekrok Shin</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
-Changmin Kang</span>, <span class=author-highlighted>
+Junsoo Oh</span>, <span>
+Jerry Song</span>, <span class=author-highlighted>
 Chulhee Yun</span>
 </div>
 <span class=article-date>
-February 2025
+June 2025
 </span>
-</div>
-<div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href="https://openreview.net/forum?id=9rLxi2cnZC" target=_blank rel=noopener>
-Paper</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2502.06905 target=_blank rel=noopener>
-arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>Recent advances in deep learning rely heavily on massive datasets, leading to substantial storage and training costs. Dataset pruning aims to alleviate this demand by discarding redundant examples. However, many existing methods require training a model with a full dataset over a large number of epochs before being able to prune the dataset, which ironically makes the pruning process more expensive than just training the model on the entire dataset. To overcome this limitation, we introduce the <strong>Difficulty and Uncertainty-Aware Lightweight (DUAL)</strong> score, which aims to identify important samples from the early training stage by considering both example difficulty and prediction uncertainty. To address a catastrophic accuracy drop at an extreme pruning ratio, we further propose a pruning ratio-adaptive sampling using Beta distribution. Experiments on various datasets and learning scenarios such as image classification with label noise and image corruption, and model architecture generalization demonstrate the superiority of our method over previous state-of-the-art (SOTA) approaches. Specifically, on ImageNet-1k, our method reduces the time cost for pruning to 66% compared to previous methods while achieving a SOTA 60% test accuracy at a 90% pruning ratio. On CIFAR datasets, the time cost is reduced to just 15% while maintaining SOTA performance.</p>
+<p class=pub-abstract>Weak-to-strong generalization refers to the phenomenon where a stronger model trained under supervision from a weaker one can outperform its teacher. While prior studies aim to explain this effect, most theoretical insights are limited to abstract frameworks or linear/random feature models. In this paper, we provide a formal analysis of weak-to-strong generalization from a linear CNN (weak) to a two-layer ReLU CNN (strong). We consider structured data composed of label-dependent signals of varying difficulty and label-independent noise, and analyze gradient descent dynamics when the strong model is trained on data labeled by the pretrained weak model. Our analysis identifies two regimes—data-scarce and data-abundant—based on the signal-to-noise characteristics of the dataset, and reveals distinct mechanisms of weak-to-strong generalization. In the data-scarce regime, generalization occurs via benign overfitting or fails via harmful overfitting, depending on the amount of data, and we characterize the transition boundary. In the data-abundant regime, generalization emerges in the early phase through label correction, but we observe that overtraining can subsequently degrade performance.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Type</div>
 <div class="col-12 col-md-9">
-<a href=/publication/#1>
-Conference paper
+<a href=/publication/#3>
+Preprint
 </a>
 </div>
 </div>
@@ -145,7 +138,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>International Conference on Machine Learning 2025</em></div>
+<div class="col-12 col-md-9"><em>ICML 2025 Workshop on High-dimensional Learning Dynamics (HiLD)</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
