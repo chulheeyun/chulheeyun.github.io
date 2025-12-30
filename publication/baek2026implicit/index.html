@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="We study matrix completion via deep matrix factorization (a.k.a. deep linear neural networks) as a simplified testbed to examine how network depth influences training dynamics. Despite the simplicity and importance of the problem, prior theory largely focuses on shallow (depth-2) models and does not fully explain the implicit low-rank bias observed in deeper networks. We identify coupled dynamics as a key mechanism behind this bias and show that it intensifies with increasing depth. Focusing on gradient flow under diagonal observations, we prove: (a) networks of depth $\geq 3$ exhibit coupling unless initialized diagonally, and (b) convergence to rank-1 occurs if and only if the dynamics is coupled—resolving an open question by Menon (2024) for a family of initializations. We also revisit the loss of plasticity phenomenon in matrix completion (Kleinman et al., 2024), where pre-training on few observations and resuming with more degrades performance. We show that deep models avoid plasticity loss due to their low-rank bias, whereas depth-2 networks pre-trained under decoupled dynamics fail to converge to low-rank, even when resumed training (with additional data) satisfies the coupling condition—shedding light on the mechanism behind this phenomenon.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/shin2025implicit/>
+<meta name=description content="Adam [Kingma & Ba, 2015] is the de facto optimizer in deep learning, yet its theoretical understanding remains limited. Prior analyses show that Adam favors solutions aligned with $\ell_\infty$-geometry, but these results are restricted to the full-batch regime. In this work, we study the implicit bias of incremental Adam (using one sample per step) for logistic regression on linearly separable data, and show that its bias can deviate from the full-batch behavior. As an extreme example, we construct datasets on which incremental Adam provably converges to the $\ell_2$-max-margin classifier, in contrast to the $\ell_\infty$-max-margin bias of full-batch Adam. For general datasets, we characterize its bias using a proxy algorithm for the $\beta_2 \to 1$ limit. This proxy maximizes a data-adaptive Mahalanobis-norm margin, whose associated covariance matrix is determined by a data-dependent dual fixed-point formulation. We further present concrete datasets where this bias reduces to the standard $\ell_2$- and $\ell_\infty$-max-margin classifiers. As a counterpoint, we prove that Signum [Bernstein et al., 2018] converges to the $\ell_\infty$-max-margin classifier for any batch size. Overall, our results highlight that the implicit bias of Adam crucially depends on both the batching scheme and the dataset, while Signum remains invariant.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/baek2026implicit/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/shin2025implicit/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/baek2026implicit/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/shin2025implicit/">
-<meta property="og:title" content="Implicit Bias and Loss of Plasticity in Matrix Completion: Depth Promotes Low-Rank Solutions | Chulhee “Charlie” Yun">
-<meta property="og:description" content="We study matrix completion via deep matrix factorization (a.k.a. deep linear neural networks) as a simplified testbed to examine how network depth influences training dynamics. Despite the simplicity and importance of the problem, prior theory largely focuses on shallow (depth-2) models and does not fully explain the implicit low-rank bias observed in deeper networks. We identify coupled dynamics as a key mechanism behind this bias and show that it intensifies with increasing depth. Focusing on gradient flow under diagonal observations, we prove: (a) networks of depth $\geq 3$ exhibit coupling unless initialized diagonally, and (b) convergence to rank-1 occurs if and only if the dynamics is coupled—resolving an open question by Menon (2024) for a family of initializations. We also revisit the loss of plasticity phenomenon in matrix completion (Kleinman et al., 2024), where pre-training on few observations and resuming with more degrades performance. We show that deep models avoid plasticity loss due to their low-rank bias, whereas depth-2 networks pre-trained under decoupled dynamics fail to converge to low-rank, even when resumed training (with additional data) satisfies the coupling condition—shedding light on the mechanism behind this phenomenon."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/baek2026implicit/">
+<meta property="og:title" content="Implicit Bias of Per-sample Adam on Separable Data: Departure from the Full-batch Regime | Chulhee “Charlie” Yun">
+<meta property="og:description" content="Adam [Kingma & Ba, 2015] is the de facto optimizer in deep learning, yet its theoretical understanding remains limited. Prior analyses show that Adam favors solutions aligned with $\ell_\infty$-geometry, but these results are restricted to the full-batch regime. In this work, we study the implicit bias of incremental Adam (using one sample per step) for logistic regression on linearly separable data, and show that its bias can deviate from the full-batch behavior. As an extreme example, we construct datasets on which incremental Adam provably converges to the $\ell_2$-max-margin classifier, in contrast to the $\ell_\infty$-max-margin bias of full-batch Adam. For general datasets, we characterize its bias using a proxy algorithm for the $\beta_2 \to 1$ limit. This proxy maximizes a data-adaptive Mahalanobis-norm margin, whose associated covariance matrix is determined by a data-dependent dual fixed-point formulation. We further present concrete datasets where this bias reduces to the standard $\ell_2$- and $\ell_\infty$-max-margin classifiers. As a counterpoint, we prove that Signum [Bernstein et al., 2018] converges to the $\ell_\infty$-max-margin classifier for any batch size. Overall, our results highlight that the implicit bias of Adam crucially depends on both the batching scheme and the dataset, while Signum remains invariant."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2025-06-10T03:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/shin2025implicit/"},"headline":"Implicit Bias and Loss of Plasticity in Matrix Completion: Depth Promotes Low-Rank Solutions","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-06-10T03:00:00Z","author":{"@type":"Person","name":"Baekrok Shin"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"We study matrix completion via deep matrix factorization (a.k.a. deep linear neural networks) as a simplified testbed to examine how network depth influences training dynamics. Despite the simplicity and importance of the problem, prior theory largely focuses on shallow (depth-2) models and does not fully explain the implicit low-rank bias observed in deeper networks. We identify coupled dynamics as a key mechanism behind this bias and show that it intensifies with increasing depth. Focusing on gradient flow under diagonal observations, we prove: (a) networks of depth $\\geq 3$ exhibit coupling unless initialized diagonally, and (b) convergence to rank-1 occurs if and only if the dynamics is coupled—resolving an open question by Menon (2024) for a family of initializations. We also revisit the loss of plasticity phenomenon in matrix completion (Kleinman et al., 2024), where pre-training on few observations and resuming with more degrades performance. We show that deep models avoid plasticity loss due to their low-rank bias, whereas depth-2 networks pre-trained under decoupled dynamics fail to converge to low-rank, even when resumed training (with additional data) satisfies the coupling condition—shedding light on the mechanism behind this phenomenon."}</script>
-<title>Implicit Bias and Loss of Plasticity in Matrix Completion: Depth Promotes Low-Rank Solutions | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2025-12-10T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/baek2026implicit/"},"headline":"Implicit Bias of Per-sample Adam on Separable Data: Departure from the Full-batch Regime","datePublished":"2023-10-28T00:00:00Z","dateModified":"2025-12-10T00:00:00Z","author":{"@type":"Person","name":"Beomhan Baek"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Adam [Kingma \u0026 Ba, 2015] is the de facto optimizer in deep learning, yet its theoretical understanding remains limited. Prior analyses show that Adam favors solutions aligned with $\\ell_\\infty$-geometry, but these results are restricted to the full-batch regime. In this work, we study the implicit bias of incremental Adam (using one sample per step) for logistic regression on linearly separable data, and show that its bias can deviate from the full-batch behavior. As an extreme example, we construct datasets on which incremental Adam provably converges to the $\\ell_2$-max-margin classifier, in contrast to the $\\ell_\\infty$-max-margin bias of full-batch Adam. For general datasets, we characterize its bias using a proxy algorithm for the $\\beta_2 \\to 1$ limit. This proxy maximizes a data-adaptive Mahalanobis-norm margin, whose associated covariance matrix is determined by a data-dependent dual fixed-point formulation. We further present concrete datasets where this bias reduces to the standard $\\ell_2$- and $\\ell_\\infty$-max-margin classifiers. As a counterpoint, we prove that Signum [Bernstein et al., 2018] converges to the $\\ell_\\infty$-max-margin classifier for any batch size. Overall, our results highlight that the implicit bias of Adam crucially depends on both the batching scheme and the dataset, while Signum remains invariant."}</script>
+<title>Implicit Bias of Per-sample Adam on Separable Data: Departure from the Full-batch Regime | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=4b1a4e748d4f4817d7ea37258d43ffbf>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=6bff46df760456e9b02fe285cdb2b6e9>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,29 +102,34 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Implicit Bias and Loss of Plasticity in Matrix Completion: Depth Promotes Low-Rank Solutions</h1>
+<h1>Implicit Bias of Per-sample Adam on Separable Data: Departure from the Full-batch Regime</h1>
 <div class=article-metadata>
 <div>
 <span>
-Baekrok Shin</span>, <span class=author-highlighted>
+Beomhan Baek</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
+Minhak Song</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span class=author-highlighted>
 Chulhee Yun</span>
 </div>
 <span class=article-date>
-June 2025
+December 2025
 </span>
+</div>
+<div class="btn-links mb-3">
+<a class="btn btn-outline-primary btn-page-header" href=https://www.arxiv.org/abs/2510.26303 target=_blank rel=noopener>
+arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>We study matrix completion via deep matrix factorization (a.k.a. deep linear neural networks) as a simplified testbed to examine how network depth influences training dynamics. Despite the simplicity and importance of the problem, prior theory largely focuses on shallow (depth-2) models and does not fully explain the implicit low-rank bias observed in deeper networks. We identify coupled dynamics as a key mechanism behind this bias and show that it intensifies with increasing depth. Focusing on gradient flow under diagonal observations, we prove: (a) networks of depth $\geq 3$ exhibit coupling unless initialized diagonally, and (b) convergence to rank-1 occurs if and only if the dynamics is coupled—resolving an open question by Menon (2024) for a family of initializations. We also revisit the loss of plasticity phenomenon in matrix completion (Kleinman et al., 2024), where pre-training on few observations and resuming with more degrades performance. We show that deep models avoid plasticity loss due to their low-rank bias, whereas depth-2 networks pre-trained under decoupled dynamics fail to converge to low-rank, even when resumed training (with additional data) satisfies the coupling condition—shedding light on the mechanism behind this phenomenon.</p>
+<p class=pub-abstract>Adam [Kingma & Ba, 2015] is the de facto optimizer in deep learning, yet its theoretical understanding remains limited. Prior analyses show that Adam favors solutions aligned with $\ell_\infty$-geometry, but these results are restricted to the full-batch regime. In this work, we study the implicit bias of incremental Adam (using one sample per step) for logistic regression on linearly separable data, and show that its bias can deviate from the full-batch behavior. As an extreme example, we construct datasets on which incremental Adam provably converges to the $\ell_2$-max-margin classifier, in contrast to the $\ell_\infty$-max-margin bias of full-batch Adam. For general datasets, we characterize its bias using a proxy algorithm for the $\beta_2 \to 1$ limit. This proxy maximizes a data-adaptive Mahalanobis-norm margin, whose associated covariance matrix is determined by a data-dependent dual fixed-point formulation. We further present concrete datasets where this bias reduces to the standard $\ell_2$- and $\ell_\infty$-max-margin classifiers. As a counterpoint, we prove that Signum [Bernstein et al., 2018] converges to the $\ell_\infty$-max-margin classifier for any batch size. Overall, our results highlight that the implicit bias of Adam crucially depends on both the batching scheme and the dataset, while Signum remains invariant.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Type</div>
 <div class="col-12 col-md-9">
-<a href=/publication/#3>
-Preprint
+<a href=/publication/#1>
+Conference paper
 </a>
 </div>
 </div>
@@ -137,7 +142,7 @@ Preprint
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>NeurIPS 2025 Workshop on Dynamics at the Frontiers of Optimization, Sampling, and Games (DynaFront)</em></div>
+<div class="col-12 col-md-9"><em>NeurIPS 2025 Workshop on Optimization for Machine Learning (OPT 2025)</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
