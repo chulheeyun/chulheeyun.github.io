@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content="We study the implicit bias of sharpness-aware minimization (SAM) when training $L$-layer linear diagonal networks on linearly separable binary classification. For linear models ($L=1$), both $\ell_\infty$- and $\ell_2$-SAM recover the $\ell_2$ max-margin classifier, matching gradient descent (GD). However, for depth $L=2$, the behavior changes drastically—even on a single-example dataset where we can analyze the dynamics. For $\ell_\infty$-SAM, the limit direction depends critically on initialization and can converge to $0$ or to any standard basis vector; this is in stark contrast to GD, whose limit aligns with the basis vector of the dominant coordinate in the data. For $\ell_2$-SAM, we uncover a phenomenon we call sequential feature amplification, in which the predictor initially relies on minor coordinates and gradually shifts to larger ones as training proceeds or initialization grows. Our theoretical analysis attributes this phenomenon to $\ell_2$-SAM’s gradient normalization factor applied in its perturbation, which amplifies minor coordinates early and allows major ones to dominate later. Synthetic and real-data experiments corroborate our findings.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/moon2026minor/>
+<meta name=description content="Autoregressive decoding, a major bottleneck in LLM inference, requires a complete forward pass for each token generation. Speculative decoding mitigates this cost by using a fast draft model to propose multiple candidate tokens and a verifier to accept or correct them, while preserving the target distribution. Token Verification (TV), a common baseline verification method for multi-step drafts, repeatedly applies a single-step verification rule in the sequence direction and stops at the first rejection. However, it is suboptimal even for drafts with a single candidate per step. We propose Layer Verification (LV), a new modular lifting strategy that converts any single-step verification rule into a draft-tree verifier, improving acceptance efficiency over TV. LV assigns appropriate scores to each tree node according to a single-step verification rule, coordinating acceptance mass across nodes within each layer. It then sweeps the draft tree layer by layer, selecting the accepted endpoint and sampling the corrected token. We prove that LV is lossless and preserves the target distribution when the underlying single-step verifier is lossless. Notably, when instantiated with Global Resolution (Thomas & Pal, 2026b), LV attains near-optimal expected acceptance length in both single-step multi-candidate and multi-step single-candidate drafts. Experiments on synthetic autoregressive models and LLM decoding corroborate the efficacy and efficiency of our method.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/cha2026layer/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/moon2026minor/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/cha2026layer/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/moon2026minor/">
-<meta property="og:title" content="Minor First, Major Last: A Depth-Induced Implicit Bias of Sharpness-Aware Minimization | Chulhee “Charlie” Yun">
-<meta property="og:description" content="We study the implicit bias of sharpness-aware minimization (SAM) when training $L$-layer linear diagonal networks on linearly separable binary classification. For linear models ($L=1$), both $\ell_\infty$- and $\ell_2$-SAM recover the $\ell_2$ max-margin classifier, matching gradient descent (GD). However, for depth $L=2$, the behavior changes drastically—even on a single-example dataset where we can analyze the dynamics. For $\ell_\infty$-SAM, the limit direction depends critically on initialization and can converge to $0$ or to any standard basis vector; this is in stark contrast to GD, whose limit aligns with the basis vector of the dominant coordinate in the data. For $\ell_2$-SAM, we uncover a phenomenon we call sequential feature amplification, in which the predictor initially relies on minor coordinates and gradually shifts to larger ones as training proceeds or initialization grows. Our theoretical analysis attributes this phenomenon to $\ell_2$-SAM’s gradient normalization factor applied in its perturbation, which amplifies minor coordinates early and allows major ones to dominate later. Synthetic and real-data experiments corroborate our findings."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/cha2026layer/">
+<meta property="og:title" content="Layer Verification Accelerates Speculative Tree Decoding | Chulhee “Charlie” Yun">
+<meta property="og:description" content="Autoregressive decoding, a major bottleneck in LLM inference, requires a complete forward pass for each token generation. Speculative decoding mitigates this cost by using a fast draft model to propose multiple candidate tokens and a verifier to accept or correct them, while preserving the target distribution. Token Verification (TV), a common baseline verification method for multi-step drafts, repeatedly applies a single-step verification rule in the sequence direction and stops at the first rejection. However, it is suboptimal even for drafts with a single candidate per step. We propose Layer Verification (LV), a new modular lifting strategy that converts any single-step verification rule into a draft-tree verifier, improving acceptance efficiency over TV. LV assigns appropriate scores to each tree node according to a single-step verification rule, coordinating acceptance mass across nodes within each layer. It then sweeps the draft tree layer by layer, selecting the accepted endpoint and sampling the corrected token. We prove that LV is lossless and preserves the target distribution when the underlying single-step verifier is lossless. Notably, when instantiated with Global Resolution (Thomas & Pal, 2026b), LV attains near-optimal expected acceptance length in both single-step multi-candidate and multi-step single-candidate drafts. Experiments on synthetic autoregressive models and LLM decoding corroborate the efficacy and efficiency of our method."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2026-01-31T03:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/moon2026minor/"},"headline":"Minor First, Major Last: A Depth-Induced Implicit Bias of Sharpness-Aware Minimization","datePublished":"2023-10-28T00:00:00Z","dateModified":"2026-01-31T03:00:00Z","author":{"@type":"Person","name":"Chaewon Moon"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"We study the implicit bias of sharpness-aware minimization (SAM) when training $L$-layer linear diagonal networks on linearly separable binary classification. For linear models ($L=1$), both $\\ell_\\infty$- and $\\ell_2$-SAM recover the $\\ell_2$ max-margin classifier, matching gradient descent (GD). However, for depth $L=2$, the behavior changes drastically—even on a single-example dataset where we can analyze the dynamics. For $\\ell_\\infty$-SAM, the limit direction depends critically on initialization and can converge to $0$ or to any standard basis vector; this is in stark contrast to GD, whose limit aligns with the basis vector of the dominant coordinate in the data. For $\\ell_2$-SAM, we uncover a phenomenon we call sequential feature amplification, in which the predictor initially relies on minor coordinates and gradually shifts to larger ones as training proceeds or initialization grows. Our theoretical analysis attributes this phenomenon to $\\ell_2$-SAM’s gradient normalization factor applied in its perturbation, which amplifies minor coordinates early and allows major ones to dominate later. Synthetic and real-data experiments corroborate our findings."}</script>
-<title>Minor First, Major Last: A Depth-Induced Implicit Bias of Sharpness-Aware Minimization | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2026-07-01T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/cha2026layer/"},"headline":"Layer Verification Accelerates Speculative Tree Decoding","datePublished":"2023-10-28T00:00:00Z","dateModified":"2026-07-01T00:00:00Z","author":{"@type":"Person","name":"Jaeyoung Cha"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Autoregressive decoding, a major bottleneck in LLM inference, requires a complete forward pass for each token generation. Speculative decoding mitigates this cost by using a fast draft model to propose multiple candidate tokens and a verifier to accept or correct them, while preserving the target distribution. Token Verification (TV), a common baseline verification method for multi-step drafts, repeatedly applies a single-step verification rule in the sequence direction and stops at the first rejection. However, it is suboptimal even for drafts with a single candidate per step. We propose Layer Verification (LV), a new modular lifting strategy that converts any single-step verification rule into a draft-tree verifier, improving acceptance efficiency over TV. LV assigns appropriate scores to each tree node according to a single-step verification rule, coordinating acceptance mass across nodes within each layer. It then sweeps the draft tree layer by layer, selecting the accepted endpoint and sampling the corrected token. We prove that LV is lossless and preserves the target distribution when the underlying single-step verifier is lossless. Notably, when instantiated with Global Resolution (Thomas \u0026 Pal, 2026b), LV attains near-optimal expected acceptance length in both single-step multi-candidate and multi-step single-candidate drafts. Experiments on synthetic autoregressive models and LLM decoding corroborate the efficacy and efficiency of our method."}</script>
+<title>Layer Verification Accelerates Speculative Tree Decoding | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=e80749f881e22f6e0f98173a8e0feeda>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=d38f9d783d3314ea2aa1e812b57f96d6>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,36 +102,30 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Minor First, Major Last: A Depth-Induced Implicit Bias of Sharpness-Aware Minimization</h1>
+<h1>Layer Verification Accelerates Speculative Tree Decoding</h1>
 <div class=article-metadata>
 <div>
 <span>
-Chaewon Moon</span>, <span>
-Dongkuk Si</span>, <span class=author-highlighted>
+Jaeyoung Cha</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span>
+Hanseul Cho</span><i class="author-notes fas fa-info-circle" data-toggle=tooltip title="Equal contribution"></i>, <span class=author-highlighted>
 Chulhee Yun</span>
 </div>
 <span class=article-date>
-January 2026
+July 2026
 </span>
-</div>
-<div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href="https://openreview.net/forum?id=ErnnE2UNI2" target=_blank rel=noopener>
-Paper</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2603.08290 target=_blank rel=noopener>
-arXiv</a>
 </div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>We study the implicit bias of sharpness-aware minimization (SAM) when training $L$-layer linear diagonal networks on linearly separable binary classification. For linear models ($L=1$), both $\ell_\infty$- and $\ell_2$-SAM recover the $\ell_2$ max-margin classifier, matching gradient descent (GD). However, for depth $L=2$, the behavior changes drastically—even on a single-example dataset where we can analyze the dynamics. For $\ell_\infty$-SAM, the limit direction depends critically on initialization and can converge to $0$ or to any standard basis vector; this is in stark contrast to GD, whose limit aligns with the basis vector of the dominant coordinate in the data. For $\ell_2$-SAM, we uncover a phenomenon we call sequential feature amplification, in which the predictor initially relies on minor coordinates and gradually shifts to larger ones as training proceeds or initialization grows. Our theoretical analysis attributes this phenomenon to $\ell_2$-SAM’s gradient normalization factor applied in its perturbation, which amplifies minor coordinates early and allows major ones to dominate later. Synthetic and real-data experiments corroborate our findings.</p>
+<p class=pub-abstract>Autoregressive decoding, a major bottleneck in LLM inference, requires a complete forward pass for each token generation. Speculative decoding mitigates this cost by using a fast draft model to propose multiple candidate tokens and a verifier to accept or correct them, while preserving the target distribution. Token Verification (TV), a common baseline verification method for multi-step drafts, repeatedly applies a single-step verification rule in the sequence direction and stops at the first rejection. However, it is suboptimal even for drafts with a single candidate per step. We propose Layer Verification (LV), a new modular lifting strategy that converts any single-step verification rule into a draft-tree verifier, improving acceptance efficiency over TV. LV assigns appropriate scores to each tree node according to a single-step verification rule, coordinating acceptance mass across nodes within each layer. It then sweeps the draft tree layer by layer, selecting the accepted endpoint and sampling the corrected token. We prove that LV is lossless and preserves the target distribution when the underlying single-step verifier is lossless. Notably, when instantiated with Global Resolution (Thomas & Pal, 2026b), LV attains near-optimal expected acceptance length in both single-step multi-candidate and multi-step single-candidate drafts. Experiments on synthetic autoregressive models and LLM decoding corroborate the efficacy and efficiency of our method.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Type</div>
 <div class="col-12 col-md-9">
-<a href=/publication/#1>
-Conference paper
+<a href=/publication/#3>
+Preprint
 </a>
 </div>
 </div>
@@ -144,7 +138,7 @@ Conference paper
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>International Conference on Learning Representations 2026</em></div>
+<div class="col-12 col-md-9"><em>ICML 2026 Workshop on Resource-Adaptive Foundation Model Inference (AdaptFM)</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
