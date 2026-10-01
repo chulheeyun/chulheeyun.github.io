@@ -8,8 +8,8 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Chulhee Yun">
-<meta name=description content=" We propose Nesterov acceleration with Operator Decomposition (NOD), which extends Nesterov's accelerated gradient descent (NAG) from smooth strongly convex optimization to the broader setting of strongly monotone, Lipschitz operators. The key insight is to decompose the operator into cyclically monotone and monotone components, with the Asplund decomposition providing the tightest such representation, and to have the algorithm utilize the decomposed oracles. NOD and its analysis subsume the classical theory of Nesterov acceleration and yield an iteration complexity for finding an $\epsilon$-accurate solution of $$ \Theta\left( \sqrt{ \frac{L_{\phi}}{\mu} + \frac{L_{\mathbb{S}}^2}{\mu^2} } \log\frac{1}{\epsilon} \right), $$ where $\mu$ is the strong monotonicity parameter, $L_{\phi}$ is the Lipschitz constant of the cyclically monotone component, and $L_{\mathbb{S}}$ is the Lipschitz constant of the (possibly acyclic) monotone remainder.">
-<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/lee2026nesterov/>
+<meta name=description content="Dynamic sample reweighting can emphasize informative examples, but it also changes update geometry. Under interpolation, the usual loss-gap view is sufficient; outside it, minibatch-dependent weights can amplify the mean-squared deviation of the weighted gradient from the full gradient by a factor quadratic in the minibatch size relative to uniform averaging. We construct a well-conditioned deterministic full-batch problem where the best local linear complexity of entropy-smoothed loss reweighting grows with component-gradient variation, while uniform gradient descent is unaffected by that variation. Motivated by this failure, we propose Geometry-Aware Reweighting (GAR), which retains the quadratic update norm in the same descent calculation. GAR preserves the usual minibatch-variance scale of uniform SGD, improves its convergence upper bound by an explicit nonnegative margin, and locally damps the directions in which loss-only weighting creates additional curvature. Experiments on language models from 120M to 300M parameters show improved average log-perplexity over uniform AdamW and loss-only reweighting.">
+<link rel=alternate hreflang=en-us href=https://chulheeyun.github.io/publication/yun2026beyond/>
 <meta name=theme-color content="#bbdefb">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,19 +20,19 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://chulheeyun.github.io/publication/lee2026nesterov/>
+<link rel=canonical href=https://chulheeyun.github.io/publication/yun2026beyond/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Chulhee “Charlie” Yun">
-<meta property="og:url" content="https://chulheeyun.github.io/publication/lee2026nesterov/">
-<meta property="og:title" content="Nesterov Acceleration with Operator Decomposition | Chulhee “Charlie” Yun">
-<meta property="og:description" content=" We propose Nesterov acceleration with Operator Decomposition (NOD), which extends Nesterov's accelerated gradient descent (NAG) from smooth strongly convex optimization to the broader setting of strongly monotone, Lipschitz operators. The key insight is to decompose the operator into cyclically monotone and monotone components, with the Asplund decomposition providing the tightest such representation, and to have the algorithm utilize the decomposed oracles. NOD and its analysis subsume the classical theory of Nesterov acceleration and yield an iteration complexity for finding an $\epsilon$-accurate solution of $$ \Theta\left( \sqrt{ \frac{L_{\phi}}{\mu} + \frac{L_{\mathbb{S}}^2}{\mu^2} } \log\frac{1}{\epsilon} \right), $$ where $\mu$ is the strong monotonicity parameter, $L_{\phi}$ is the Lipschitz constant of the cyclically monotone component, and $L_{\mathbb{S}}$ is the Lipschitz constant of the (possibly acyclic) monotone remainder."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://chulheeyun.github.io/publication/yun2026beyond/">
+<meta property="og:title" content="Beyond Loss Gaps: Stability and Geometry in Dynamic Sample Reweighting | Chulhee “Charlie” Yun">
+<meta property="og:description" content="Dynamic sample reweighting can emphasize informative examples, but it also changes update geometry. Under interpolation, the usual loss-gap view is sufficient; outside it, minibatch-dependent weights can amplify the mean-squared deviation of the weighted gradient from the full gradient by a factor quadratic in the minibatch size relative to uniform averaging. We construct a well-conditioned deterministic full-batch problem where the best local linear complexity of entropy-smoothed loss reweighting grows with component-gradient variation, while uniform gradient descent is unaffected by that variation. Motivated by this failure, we propose Geometry-Aware Reweighting (GAR), which retains the quadratic update norm in the same descent calculation. GAR preserves the usual minibatch-variance scale of uniform SGD, improves its convergence upper bound by an explicit nonnegative margin, and locally damps the directions in which loss-only weighting creates additional curvature. Experiments on language models from 120M to 300M parameters show improved average log-perplexity over uniform AdamW and loss-only reweighting."><meta property="og:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2023-10-28T00:00:00+00:00">
-<meta property="article:modified_time" content="2026-09-03T00:00:00+00:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/lee2026nesterov/"},"headline":"Nesterov Acceleration with Operator Decomposition","datePublished":"2023-10-28T00:00:00Z","dateModified":"2026-09-03T00:00:00Z","author":{"@type":"Person","name":"Jaewook Lee"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":" We propose Nesterov acceleration with Operator Decomposition (NOD), which extends Nesterov's accelerated gradient descent (NAG) from smooth strongly convex optimization to the broader setting of strongly monotone, Lipschitz operators. The key insight is to decompose the operator into cyclically monotone and monotone components, with the Asplund decomposition providing the tightest such representation, and to have the algorithm utilize the decomposed oracles. NOD and its analysis subsume the classical theory of Nesterov acceleration and yield an iteration complexity for finding an $\\epsilon$-accurate solution of $$ \\Theta\\left( \\sqrt{ \\frac{L_{\\phi}}{\\mu} + \\frac{L_{\\mathbb{S}}^2}{\\mu^2} } \\log\\frac{1}{\\epsilon} \\right), $$ where $\\mu$ is the strong monotonicity parameter, $L_{\\phi}$ is the Lipschitz constant of the cyclically monotone component, and $L_{\\mathbb{S}}$ is the Lipschitz constant of the (possibly acyclic) monotone remainder."}</script>
-<title>Nesterov Acceleration with Operator Decomposition | Chulhee “Charlie” Yun</title>
+<meta property="article:modified_time" content="2026-09-02T04:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://chulheeyun.github.io/publication/yun2026beyond/"},"headline":"Beyond Loss Gaps: Stability and Geometry in Dynamic Sample Reweighting","datePublished":"2023-10-28T00:00:00Z","dateModified":"2026-09-02T04:00:00Z","author":{"@type":"Person","name":"Chulhee Yun"},"publisher":{"@type":"Organization","name":"Chulhee “Charlie” Yun","logo":{"@type":"ImageObject","url":"https://chulheeyun.github.io/media/icon_huab7a42417b42d6935dd5e37419205d92_14830_192x192_fill_lanczos_center_3.png"}},"description":"Dynamic sample reweighting can emphasize informative examples, but it also changes update geometry. Under interpolation, the usual loss-gap view is sufficient; outside it, minibatch-dependent weights can amplify the mean-squared deviation of the weighted gradient from the full gradient by a factor quadratic in the minibatch size relative to uniform averaging. We construct a well-conditioned deterministic full-batch problem where the best local linear complexity of entropy-smoothed loss reweighting grows with component-gradient variation, while uniform gradient descent is unaffected by that variation. Motivated by this failure, we propose Geometry-Aware Reweighting (GAR), which retains the quadratic update norm in the same descent calculation. GAR preserves the usual minibatch-variance scale of uniform SGD, improves its convergence upper bound by an explicit nonnegative margin, and locally damps the directions in which loss-only weighting creates additional curvature. Experiments on language models from 120M to 300M parameters show improved average log-perplexity over uniform AdamW and loss-only reweighting."}</script>
+<title>Beyond Loss Gaps: Stability and Geometry in Dynamic Sample Reweighting | Chulhee “Charlie” Yun</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=847af46dbf0c0b80ebb116e41aaf7369>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class="page-wrapper dark" data-wc-page-id=d2bdd5e648997b2772398b0ea0c1fc61>
 <script src=/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -102,26 +102,21 @@
 <div class=page-body>
 <div class=pub>
 <div class="article-container pt-3">
-<h1>Nesterov Acceleration with Operator Decomposition</h1>
+<h1>Beyond Loss Gaps: Stability and Geometry in Dynamic Sample Reweighting</h1>
 <div class=article-metadata>
 <div>
-<span>
-Jaewook Lee</span>, <span>
-Ernest K. Ryu</span>, <span class=author-highlighted>
-Chulhee Yun</span>
+<span class=author-highlighted>
+Chulhee Yun</span>, <span>
+Ananda Theertha Suresh</span>
 </div>
 <span class=article-date>
 September 2026
 </span>
 </div>
-<div class="btn-links mb-3">
-<a class="btn btn-outline-primary btn-page-header" href=https://arxiv.org/abs/2604.11105 target=_blank rel=noopener>
-arXiv</a>
-</div>
 </div>
 <div class=article-container>
 <h3>Abstract</h3>
-<p class=pub-abstract>We propose Nesterov acceleration with Operator Decomposition (NOD), which extends Nesterov&rsquo;s accelerated gradient descent (NAG) from smooth strongly convex optimization to the broader setting of strongly monotone, Lipschitz operators. The key insight is to decompose the operator into cyclically monotone and monotone components, with the Asplund decomposition providing the tightest such representation, and to have the algorithm utilize the decomposed oracles. NOD and its analysis subsume the classical theory of Nesterov acceleration and yield an iteration complexity for finding an $\epsilon$-accurate solution of $$ \Theta\left( \sqrt{ \frac{L_{\phi}}{\mu} + \frac{L_{\mathbb{S}}^2}{\mu^2} } \log\frac{1}{\epsilon} \right), $$ where $\mu$ is the strong monotonicity parameter, $L_{\phi}$ is the Lipschitz constant of the cyclically monotone component, and $L_{\mathbb{S}}$ is the Lipschitz constant of the (possibly acyclic) monotone remainder.</p>
+<p class=pub-abstract>Dynamic sample reweighting can emphasize informative examples, but it also changes update geometry. Under interpolation, the usual loss-gap view is sufficient; outside it, minibatch-dependent weights can amplify the mean-squared deviation of the weighted gradient from the full gradient by a factor quadratic in the minibatch size relative to uniform averaging. We construct a well-conditioned deterministic full-batch problem where the best local linear complexity of entropy-smoothed loss reweighting grows with component-gradient variation, while uniform gradient descent is unaffected by that variation. Motivated by this failure, we propose Geometry-Aware Reweighting (GAR), which retains the quadratic update norm in the same descent calculation. GAR preserves the usual minibatch-variance scale of uniform SGD, improves its convergence upper bound by an explicit nonnegative margin, and locally damps the directions in which loss-only weighting creates additional curvature. Experiments on language models from 120M to 300M parameters show improved average log-perplexity over uniform AdamW and loss-only reweighting.</p>
 <div class=row>
 <div class=col-md-1></div>
 <div class=col-md-10>
@@ -142,7 +137,7 @@ Preprint
 <div class=col-md-10>
 <div class=row>
 <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-<div class="col-12 col-md-9"><em>arXiv preprint</em></div>
+<div class="col-12 col-md-9"><em>NeurIPS 2026 Workshop on Optimization for Machine Learning (OPT 2026)</em></div>
 </div>
 </div>
 <div class=col-md-1></div>
